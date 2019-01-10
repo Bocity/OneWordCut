@@ -9,5 +9,7 @@
 import UIKit
 
 class YKCellObject: NSObject {
-
+    
+    var url:String?
+    var title:String?
 }
