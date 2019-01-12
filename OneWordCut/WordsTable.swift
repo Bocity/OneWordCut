@@ -29,6 +29,7 @@ class WordsTable: UIViewController, UITableViewDelegate,UITableViewDataSource {
         
         tableView = UITableView(frame:CGRect(x:0,y:20,width:self.view.frame.size.width,height:self.view.frame.size.height*2/3), style:UITableViewStyle.plain)
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = UIColor.clear
         self.view .addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -52,7 +53,8 @@ class WordsTable: UIViewController, UITableViewDelegate,UITableViewDataSource {
         }
         let x = self.dataSource[indexPath.row] as! Word
         cell?.textLabel?.text = "\(x.english)                           \(x.chinese)"
-        
+        cell?.textLabel?.textColor = UIColor.white
+        cell?.backgroundColor = UIColor.clear
         return cell!
     }
     
@@ -85,8 +87,8 @@ class WordsTable: UIViewController, UITableViewDelegate,UITableViewDataSource {
         click = x
         print(click)
         tableView .deselectRow(at: indexPath, animated: true)
-        var sb = UIStoryboard(name:"Main", bundle:nil)
-        var vc = sb.instantiateViewController(withIdentifier: "VC") as! DetailViewController//
+        let sb = UIStoryboard(name:"Main", bundle:nil)
+        let vc = sb.instantiateViewController(withIdentifier: "VC") as! DetailViewController//
         vc.id = x.id
         self.present(vc, animated:true, completion:nil)
         //self.performSegue(withIdentifier: "VC", sender:nil)

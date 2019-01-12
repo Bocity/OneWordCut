@@ -23,6 +23,7 @@
 		216F029521E4DFC3004183AD /* addWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F029421E4DFC3004183AD /* addWord.swift */; };
 		216F029721E4E055004183AD /* WordsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F029621E4E055004183AD /* WordsTable.swift */; };
 		216F029921E4E212004183AD /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F029821E4E212004183AD /* About.swift */; };
+		21A27C1D21E8DB1F004C61C7 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A27C1C21E8DB1F004C61C7 /* Logo.png */; };
 		B3CEEDEB3C7F1F12F7FCC395 /* Pods_OneWordCut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC6C66645F1E09878DD811D /* Pods_OneWordCut.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		216F029421E4DFC3004183AD /* addWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addWord.swift; sourceTree = "<group>"; };
 		216F029621E4E055004183AD /* WordsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsTable.swift; sourceTree = "<group>"; };
 		216F029821E4E212004183AD /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		21A27C1C21E8DB1F004C61C7 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = SOURCE_ROOT; };
 		5FD0EECDCA9C41A39258733D /* Pods-OneWordCut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWordCut.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneWordCut/Pods-OneWordCut.release.xcconfig"; sourceTree = "<group>"; };
 		678A1C093F010F5B2D99C83E /* Pods-OneWordCut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWordCut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneWordCut/Pods-OneWordCut.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC6C66645F1E09878DD811D /* Pods_OneWordCut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneWordCut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				216F029221E4DEC9004183AD /* Card.swift */,
 				216F029021E4D93E004183AD /* ViewController2.swift */,
 				216F026921E4D904004183AD /* Assets.xcassets */,
+				21A27C1C21E8DB1F004C61C7 /* Logo.png */,
 				216F026B21E4D904004183AD /* LaunchScreen.storyboard */,
 				216F026E21E4D904004183AD /* Info.plist */,
 			);
@@ -285,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A27C1D21E8DB1F004C61C7 /* Logo.png in Resources */,
 				216F026D21E4D904004183AD /* LaunchScreen.storyboard in Resources */,
 				216F026A21E4D904004183AD /* Assets.xcassets in Resources */,
 				216F026821E4D904004183AD /* Main.storyboard in Resources */,

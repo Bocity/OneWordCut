@@ -21,7 +21,8 @@ class Card: UIViewController {
         ans = 0
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        imageContentView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 400)
+        imageContentView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 600)
+        imageContentView.backgroundColor = UIColor.clear
         imageContentView.delegate = self as? ImageScrollerDelegate;
         self.view.addSubview(imageContentView);
         
@@ -31,7 +32,7 @@ class Card: UIViewController {
             return
         }
         
-        var tmp2 = realm.objects(Word.self).filter("kill == false")
+        let tmp2 = realm.objects(Word.self).filter("kill == false")
         
         for i in 0...n-1{
             tmp.append(tmp2[i])
@@ -67,7 +68,7 @@ extension Card:ImageScrollerDelegate{
     func cellForRowAtIndex(index: NSInteger,imageContentView:YKIMageContentView) -> YKImageViewCell {
         var cell = imageContentView.dqueueReuseCell()
         if cell == nil {
-            cell = YKImageViewCell(frame: CGRect(x: 0, y: 64, width: 260, height: 300))
+            cell = YKImageViewCell(frame: CGRect(x: 0, y: 64, width: 320, height: 450))
         }
         
         let proerpty = dataSrouce[index];

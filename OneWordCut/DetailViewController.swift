@@ -24,8 +24,8 @@ class DetailViewController: UIViewController {
     var engli:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = realm.objects(Word).filter("id == \(id)").last
-        engli = (realm.objects(Word).filter("id == \(id)").last?.english)!
+        let x = realm.objects(Word.self).filter("id == \(id)").last
+        engli = (realm.objects(Word.self).filter("id == \(id)").last?.english)!
         Judge.setOn((x?.kill)!, animated: true)
         let url = "https://xtk.azurewebsites.net/BingDictService.aspx?Word=" + (x?.english)!
         Alamofire.request(url).responseJSON { response in
