@@ -1,12 +1,15 @@
 {
   "images" : [
     {
+      "idiom" : "universal"
+    },
+    {
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sou.png",
+      "filename" : "home-btn2-1.pdf",
       "scale" : "2x"
     },
     {

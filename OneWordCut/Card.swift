@@ -21,7 +21,7 @@ class Card: UIViewController {
         ans = 0
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        imageContentView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 600)
+        imageContentView.frame = CGRect(x: 0, y: 20, width: self.view.bounds.size.width, height: 600)
         imageContentView.backgroundColor = UIColor.clear
         imageContentView.delegate = self as? ImageScrollerDelegate;
         self.view.addSubview(imageContentView);
@@ -51,7 +51,7 @@ class Card: UIViewController {
         var tDataSrouce = [YKCellObject]()
         for url in tmp{
             let cellOb = YKCellObject()
-            cellOb.url = "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1547039767&di=8a819f6955c5dbca83977661f695ea4a&src=http://img.zcool.cn/community/01379359690c4ea8012193a337f7cb.JPG@1280w_1l_2o_100sh.jpg"
+            cellOb.url = "https://s2.ax1x.com/2019/01/13/FvT87q.png"
             cellOb.title = "\(url.english)    \(url.chinese)"
             tDataSrouce.append(cellOb);
         }
@@ -68,7 +68,7 @@ extension Card:ImageScrollerDelegate{
     func cellForRowAtIndex(index: NSInteger,imageContentView:YKIMageContentView) -> YKImageViewCell {
         var cell = imageContentView.dqueueReuseCell()
         if cell == nil {
-            cell = YKImageViewCell(frame: CGRect(x: 0, y: 64, width: 320, height: 450))
+            cell = YKImageViewCell(frame: CGRect(x: 0, y: 20, width: 320, height: 450))
         }
         
         let proerpty = dataSrouce[index];

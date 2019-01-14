@@ -2,11 +2,14 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "search-btn2.pdf"
+    },
+    {
+      "idiom" : "universal",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sou.png",
       "scale" : "2x"
     },
     {

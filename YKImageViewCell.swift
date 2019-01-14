@@ -19,7 +19,7 @@ class YKImageViewCell: UIView {
         self.layer.cornerRadius = 8;
         self.layer.masksToBounds = true;
         
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
         titleLabel.textColor = UIColor.black;
         
         imageView.contentMode = .scaleAspectFill
@@ -42,8 +42,8 @@ class YKImageViewCell: UIView {
     }
     
     override func layoutSubviews() {
-        imageView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height-44)
-        titleLabel.frame = CGRect(x: 20, y: self.bounds.size.height-20-15, width: 250, height: 15)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
+        titleLabel.frame = CGRect(x: self.bounds.size.width/2-75, y: 20, width: 250, height: 300)
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
     }
     

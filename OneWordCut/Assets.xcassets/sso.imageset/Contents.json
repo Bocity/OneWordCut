@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "画板 1(3).png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sou.png",
       "scale" : "2x"
     },
     {

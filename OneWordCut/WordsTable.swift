@@ -52,7 +52,14 @@ class WordsTable: UIViewController, UITableViewDelegate,UITableViewDataSource {
             cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: cellId)
         }
         let x = self.dataSource[indexPath.row] as! Word
-        cell?.textLabel?.text = "\(x.english)                           \(x.chinese)"
+        var ans = ""
+        ans += x.english
+        var ez = x.english.characters.count
+        for i in 1...40 - ez{
+            ans += " "
+        }
+        ans += x.chinese
+        cell?.textLabel?.text = ans
         cell?.textLabel?.textColor = UIColor.white
         cell?.backgroundColor = UIColor.clear
         return cell!
@@ -85,7 +92,7 @@ class WordsTable: UIViewController, UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let x = self.dataSource[indexPath.row] as! Word
         click = x
-        print(click)
+        //print(click)
         tableView .deselectRow(at: indexPath, animated: true)
         let sb = UIStoryboard(name:"Main", bundle:nil)
         let vc = sb.instantiateViewController(withIdentifier: "VC") as! DetailViewController//
