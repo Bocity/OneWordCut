@@ -1,5 +1,5 @@
 //
-//  YKImageViewCell.swift
+//  ImageViewCell.swift
 //  OneWordCut
 //
 //  Created by 郝进 on 2019/1/9.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YKImageViewCell: UIView {
+class ImageViewCell: UIView {
     let imageView = UIImageView()
     let titleLabel = UILabel()
     var initTransform:CGAffineTransform = CGAffineTransform()

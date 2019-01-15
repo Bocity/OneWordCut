@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212AC6E421E624750064EAF9 /* YKCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AC6E321E624750064EAF9 /* YKCellObject.swift */; };
-		212AC6E621E624E80064EAF9 /* YKIMageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AC6E521E624E80064EAF9 /* YKIMageContentView.swift */; };
-		212AC6E821E625280064EAF9 /* YKImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AC6E721E625280064EAF9 /* YKImageViewCell.swift */; };
 		212AD67F21E5F99B00D44C8E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AD67E21E5F99B00D44C8E /* DetailViewController.swift */; };
 		216F026321E4D904004183AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F026221E4D904004183AD /* AppDelegate.swift */; };
 		216F026521E4D904004183AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F026421E4D904004183AD /* ViewController.swift */; };
@@ -23,6 +20,8 @@
 		216F029521E4DFC3004183AD /* addWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F029421E4DFC3004183AD /* addWord.swift */; };
 		216F029721E4E055004183AD /* WordsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F029621E4E055004183AD /* WordsTable.swift */; };
 		216F029921E4E212004183AD /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F029821E4E212004183AD /* About.swift */; };
+		219E816221ED802F00D9F6CE /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219E816021ED802F00D9F6CE /* ImageViewCell.swift */; };
+		219E816321ED802F00D9F6CE /* ImageViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219E816121ED802F00D9F6CE /* ImageViewCells.swift */; };
 		21A27C1D21E8DB1F004C61C7 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A27C1C21E8DB1F004C61C7 /* Logo.png */; };
 		B3CEEDEB3C7F1F12F7FCC395 /* Pods_OneWordCut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC6C66645F1E09878DD811D /* Pods_OneWordCut.framework */; };
 /* End PBXBuildFile section */
@@ -45,9 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		212AC6E321E624750064EAF9 /* YKCellObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKCellObject.swift; sourceTree = "<group>"; };
-		212AC6E521E624E80064EAF9 /* YKIMageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKIMageContentView.swift; sourceTree = "<group>"; };
-		212AC6E721E625280064EAF9 /* YKImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKImageViewCell.swift; sourceTree = "<group>"; };
 		212AD67E21E5F99B00D44C8E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		216F025F21E4D904004183AD /* OneWordCut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWordCut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		216F026221E4D904004183AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +63,8 @@
 		216F029421E4DFC3004183AD /* addWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addWord.swift; sourceTree = "<group>"; };
 		216F029621E4E055004183AD /* WordsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsTable.swift; sourceTree = "<group>"; };
 		216F029821E4E212004183AD /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		219E816021ED802F00D9F6CE /* ImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		219E816121ED802F00D9F6CE /* ImageViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCells.swift; sourceTree = "<group>"; };
 		21A27C1C21E8DB1F004C61C7 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = SOURCE_ROOT; };
 		5FD0EECDCA9C41A39258733D /* Pods-OneWordCut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWordCut.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneWordCut/Pods-OneWordCut.release.xcconfig"; sourceTree = "<group>"; };
 		678A1C093F010F5B2D99C83E /* Pods-OneWordCut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWordCut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneWordCut/Pods-OneWordCut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,9 +100,6 @@
 		216F025621E4D904004183AD = {
 			isa = PBXGroup;
 			children = (
-				212AC6E521E624E80064EAF9 /* YKIMageContentView.swift */,
-				212AC6E721E625280064EAF9 /* YKImageViewCell.swift */,
-				212AC6E321E624750064EAF9 /* YKCellObject.swift */,
 				216F026121E4D904004183AD /* OneWordCut */,
 				216F027621E4D904004183AD /* OneWordCutTests */,
 				216F028121E4D904004183AD /* OneWordCutUITests */,
@@ -127,6 +122,8 @@
 		216F026121E4D904004183AD /* OneWordCut */ = {
 			isa = PBXGroup;
 			children = (
+				219E816021ED802F00D9F6CE /* ImageViewCell.swift */,
+				219E816121ED802F00D9F6CE /* ImageViewCells.swift */,
 				216F026221E4D904004183AD /* AppDelegate.swift */,
 				216F026421E4D904004183AD /* ViewController.swift */,
 				216F026621E4D904004183AD /* Main.storyboard */,
@@ -368,16 +365,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				216F026521E4D904004183AD /* ViewController.swift in Sources */,
-				212AC6E821E625280064EAF9 /* YKImageViewCell.swift in Sources */,
 				216F026321E4D904004183AD /* AppDelegate.swift in Sources */,
 				216F029921E4E212004183AD /* About.swift in Sources */,
+				219E816321ED802F00D9F6CE /* ImageViewCells.swift in Sources */,
 				216F029521E4DFC3004183AD /* addWord.swift in Sources */,
 				216F029121E4D93E004183AD /* ViewController2.swift in Sources */,
 				216F029721E4E055004183AD /* WordsTable.swift in Sources */,
-				212AC6E621E624E80064EAF9 /* YKIMageContentView.swift in Sources */,
 				216F029321E4DEC9004183AD /* Card.swift in Sources */,
+				219E816221ED802F00D9F6CE /* ImageViewCell.swift in Sources */,
 				212AD67F21E5F99B00D44C8E /* DetailViewController.swift in Sources */,
-				212AC6E421E624750064EAF9 /* YKCellObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

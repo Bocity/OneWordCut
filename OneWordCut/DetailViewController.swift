@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 import Alamofire
-import SwiftyJSON
+import SwiftyJSON 
 import MediaPlayer
 import RAMPaperSwitch
 

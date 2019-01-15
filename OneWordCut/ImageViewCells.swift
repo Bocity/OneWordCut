@@ -1,5 +1,5 @@
 //
-//  YKIMageContentView.swift
+//  IMageContentView.swift
 //  OneWordCut
 //
 //  Created by 郝进 on 2019/1/9.
@@ -9,24 +9,24 @@ import UIKit
 
 protocol ImageScrollerDelegate:class{
     func numerOfCells() -> Int;
-    func cellForRowAtIndex(index:NSInteger,imageContentView:YKIMageContentView) -> YKImageViewCell;
-    func didSelectedCellAtIndex(index:NSInteger,cell:YKImageViewCell);
+    func cellForRowAtIndex(index:NSInteger,imageContentView:ImageViewCells) -> ImageViewCell;
+    func didSelectedCellAtIndex(index:NSInteger,cell:ImageViewCell);
     func didSwipToLeft(index:NSInteger);
     func didSwipToRight(index:NSInteger)
 }
 
-class YKIMageContentView: UIView {
+class ImageViewCells: UIView {
     
     weak var delegate:ImageScrollerDelegate?
     var numberOfInitImages = 3;
     
-    public private(set) var  visisbleCells:[YKImageViewCell] = [YKImageViewCell]()
+    public private(set) var  visisbleCells:[ImageViewCell] = [ImageViewCell]()
     fileprivate var numberOfItems = 0;
-    fileprivate var imageView:YKImageViewCell?  {
+    fileprivate var imageView:ImageViewCell?  {
         return self.visisbleCells.first;
     }
     
-    fileprivate var reuseCells:[YKImageViewCell] = [YKImageViewCell]()
+    fileprivate var reuseCells:[ImageViewCell] = [ImageViewCell]()
     
     fileprivate struct ImageTouchePart:OptionSet{
         public let rawValue: Int
@@ -108,7 +108,7 @@ class YKIMageContentView: UIView {
         }
     }
     
-    fileprivate func setCellShowProperties(cell:inout YKImageViewCell,index:NSInteger){
+    fileprivate func setCellShowProperties(cell:inout ImageViewCell,index:NSInteger){
         let scaleY = CGFloat(1.0-0.07*Double(index))
         let transfrom  = CGAffineTransform(scaleX: CGFloat(1.0-0.07*Double(index)), y: scaleY)
         let cellHeight = cell.bounds.size.height
@@ -131,12 +131,11 @@ class YKIMageContentView: UIView {
         return .none;
     }
     
-    //MARK: - public functions
     func reloadView()  {
         constructingViews()
     }
     
-    func dqueueReuseCell() -> YKImageViewCell? {
+    func dqueueReuseCell() -> ImageViewCell? {
         if let resueCell = reuseCells.first{
             reuseCells.removeFirst()
             return resueCell
@@ -144,7 +143,6 @@ class YKIMageContentView: UIView {
         return nil
     }
     
-    //MARK: - Touch  事件
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //        touchImageCenter = visisbleCells.first?.center;
     }
@@ -221,10 +219,8 @@ class YKIMageContentView: UIView {
                     self.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2 - angle))
                 })
             }
-            //放大下层的View
             scaleCells(translation: translationPoint)
             
-            //移动时添加最后一张图
             if self.visisbleCells.count == numberOfInitImages
                 && numberOfItems > numberOfInitImages
                 && visisbleCells.last!.tag + 1 < numberOfItems{
@@ -241,10 +237,9 @@ class YKIMageContentView: UIView {
             let point = sender.location(in: self)
             let velocity = sender.velocity(in: self);
             //            print("velocity:\(velocity)");
-            //移动到了中间，回归原样，回归原样，或者只剩1张时
+
             if abs(velocity.x) < 50  {                          //||
                 if self.visisbleCells.count > numberOfInitImages{
-                    //删除最后一个
                     visisbleCells.last?.removeFromSuperview()
                     reuseCells.append( visisbleCells.last!)
                     visisbleCells.removeLast();
@@ -261,13 +256,13 @@ class YKIMageContentView: UIView {
             if activeTouchPart.contains(.touchRight) {
                 self.delegate?.didSwipToRight(index: visisbleCells.last!.tag - 3)
             }
-            //删除第一个
+
             reuseCells.append(imageView!)
             imageView?.removeFromSuperview()
             visisbleCells.removeFirst();
             activeTouchPart = .none
             
-            //重排后面的cell大小和位置
+
             rearrangeCells()
         }
     }
@@ -286,8 +281,8 @@ class YKIMageContentView: UIView {
         }
     }
     
-    //MARK: - 点击事件
-    @objc func cellClick(_ sender:YKImageViewCell)  {
+
+    @objc func cellClick(_ sender:ImageViewCell)  {
         self.delegate?.didSelectedCellAtIndex(index: sender.tag, cell: sender)
     }
 }

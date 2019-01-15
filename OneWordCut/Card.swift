@@ -10,11 +10,17 @@ import UIKit
 import SDWebImage
 import RealmSwift
 
+class CellObject: NSObject {
+    
+    var url:String?
+    var title:String?
+}
+
 class Card: UIViewController {
     let realm = try! Realm()
     
-    let imageContentView :YKIMageContentView = YKIMageContentView()
-    var dataSrouce:[YKCellObject]!
+    let imageContentView :ImageViewCells = ImageViewCells()
+    var dataSrouce:[CellObject]!
     var tmp = [Word]()
     var ans = 0;
     override func viewDidLoad() {
@@ -46,11 +52,11 @@ class Card: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func createDataSource() -> [YKCellObject] {
+    func createDataSource() -> [CellObject] {
         
-        var tDataSrouce = [YKCellObject]()
+        var tDataSrouce = [CellObject]()
         for url in tmp{
-            let cellOb = YKCellObject()
+            let cellOb = CellObject()
             cellOb.url = "https://s2.ax1x.com/2019/01/13/FvT87q.png"
             cellOb.title = "\(url.english)    \(url.chinese)"
             tDataSrouce.append(cellOb);
@@ -65,10 +71,10 @@ extension Card:ImageScrollerDelegate{
         return dataSrouce.count
     }
     
-    func cellForRowAtIndex(index: NSInteger,imageContentView:YKIMageContentView) -> YKImageViewCell {
+    func cellForRowAtIndex(index: NSInteger,imageContentView:ImageViewCells) -> ImageViewCell {
         var cell = imageContentView.dqueueReuseCell()
         if cell == nil {
-            cell = YKImageViewCell(frame: CGRect(x: 0, y: 20, width: 320, height: 450))
+            cell = ImageViewCell(frame: CGRect(x: 0, y: 20, width: 320, height: 450))
         }
         
         let proerpty = dataSrouce[index];
@@ -83,7 +89,7 @@ extension Card:ImageScrollerDelegate{
         return cell!
     }
     
-    func didSelectedCellAtIndex(index: NSInteger, cell: YKImageViewCell) {
+    func didSelectedCellAtIndex(index: NSInteger, cell: ImageViewCell) {
         print(index)
         
     }
